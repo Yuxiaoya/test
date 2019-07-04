@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>js计算器</title>
+    <script>
+        function calculator(){
+            var txt1 = parseFloat(document.getElementById("txt1").value);
+            var txt2 = parseFloat(document.getElementById("txt2").value);
+            var result = parseFloat(document.getElementById("result").value);
+            var mark = document.getElementById("mark").value;
+            switch (mark){
+                case "+" :
+                    result = txt1 + txt2;
+                    break;
+                case "-" :
+                    result = txt1 - txt2;
+                    break;
+                case "*" :
+                    result = txt1 * txt2;
+                    break;
+                case "/" :
+                    result = txt1 / txt2;
+                    break;
+            }
+            document.getElementById("result").value = result;
+        }
+    </script>
+</head>
+<body>
+    <input type="text" id="txt1" >
+`   <select id="mark">
+        <option> + </option>
+        <option> - </option>
+        <option> * </option>
+        <option> / </option>
+    </select>
+    <input type="text" id="txt2" >
+    <button onclick="calculator()"> = </button>
+    <input type="text" id="result" >
+</body>
+</html>
